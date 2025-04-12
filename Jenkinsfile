@@ -16,8 +16,8 @@ pipeline{
             }
         }
 
-        stage("Chout from SCM"){
-            steps{
+        stage("Checkout from SCM"){
+            steps {
                 git branch: 'main', credentialsId: 'github', url 'https://github.com/Tshepo2019/complete-prodcution-e2e-pipeline'
             }
         }
