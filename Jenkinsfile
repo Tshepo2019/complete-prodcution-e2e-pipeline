@@ -4,7 +4,7 @@ pipeline{
         label "jenkins-agent"
     }
 
-    tool {
+    tools {
         jdk 'Java17'
         maven 'Maven3'
     }
@@ -18,7 +18,7 @@ pipeline{
 
         stage["Chout from SCM"]{
             steps{
-                git branch 'main', credentialsId: 'github', url 'https://github.com/Tshepo2019/complete-prodcution-e2e-pipeline'
+                git branch: 'main', credentialsId: 'github', url 'https://github.com/Tshepo2019/complete-prodcution-e2e-pipeline'
             }
         }
     }
